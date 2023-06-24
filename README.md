@@ -58,4 +58,4 @@ encoded_pixel = (R, G, B)
 
 > **Note:** The application works on lossless compression formats ( e.g. PNG, BMP, TIFF). In contrast, lossy compression formats (e.g. JPEG) may alter the image and corrupt the encoded text.
 >
-> **Note:** I do not own or have any rights over the images used in this project (present in `./static/images/`). They were taken from [here](https://www.pxfuel.com/en/desktop-wallpaper-zbmaw).
+> **Note:** I do not own or have any rights over the images used in this project (present in `./static/images/`). They were taken from [here](https://pixabay.com/illustrations/earth-binary-system-system-binary-518365/). Image by Adam Białasik from Pixabay
