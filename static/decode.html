@@ -1,0 +1,39 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Steganography</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Steganography</h2>          
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="./encode.html">Encode</a></li>
+                    <li><a href="./decode.html">Decode</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>"Why did the decrypting wizard open a bakery?<br><br>
+                Because they had a knack for turning "cookie-cipher" into deliciously deciphered treats!"</h1>
+
+            <div class = "form">
+                <h2>Decode here</h2>
+                <form action="/image/decode" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="image" accept="image/*" required><br><br><br><br><br>
+                    <input type="submit" value="Decode">
+                </form>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</body>

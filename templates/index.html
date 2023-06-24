@@ -1,0 +1,54 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Steganography</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Steganography</h2>          
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="{{ url_for('static', filename='encode.html') }}">Encode</a></li>
+                    <li><a href="{{ url_for('static', filename='decode.html') }}">Decode</a></li>
+                    <li><a href="{{ url_for('last_encode_html') }}">Last Encoded</a></li>
+                    <li><a href="{{ url_for('last_decode_html') }}">Last Decoded</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>Unlocking Secrets, Hidden in Plain Sight</h1>
+            <p class="par">
+                Unlock the Hidden Language of Images with Steganography. Explore the Intriguing World of Secret Communication. Delve into the Digital Artistry of Concealing Messages within Pixels. Discover the Power of Unseen Whispers and Encrypted Codes. Join us on a Journey to Unveil Hidden Truths and Embrace the Fascinating Realm of Steganography. Decode the Secrets, Unleash the Possibilities
+            </p>
+
+            <div class="form">
+                <h2>Encode here</h2>
+                <form action="/image/encode" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="image" accept="image/*" required><br>
+                    <textarea name="text" rows="5" cols="50" required></textarea><br>
+                    <input type="submit" value="Encode" onclick="showImage()"><br><br>
+                    <h2 id="headImage" style="display: none;">Encoded image :</h2>
+                    <img id="encImage" src="/static/image_requests/encoded.png" alt="Image" style="display: none;"><br>
+                </form>
+            </div>
+
+            <script>
+                function showImage() {
+                    var header = document.getElementById('headImage');
+                    header.style.display = 'block';
+                    var image = document.getElementById('encImage');
+                    image.style.display = 'block';
+                }
+            </script>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,53 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Steganography</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Steganography</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="./encode.html">Encode</a></li>
+                    <li><a href="./decode.html">Decode</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>"Why did the encryption algorithm go to therapy?<br><br>
+                Because it had too many issues with commitment and couldn't trust anyone with its keys!"</h1>
+
+            <div class="form">
+                <h2>Encode here</h2>
+                <form action="/image/encode" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="image" accept="image/*" required><br>
+                    <textarea name="text" rows="5" cols="50" required></textarea><br>
+                    <input type="submit" value="Encode" onclick="showImage()"><br><br>
+                    <h2 id="headImage" style="display: none;">Encoded image :</h2>
+                    <img id="encImage" src="/static/image_requests/encoded.png" alt="Image" style="display: none;"><br>
+                </form>
+            </div>
+
+            <script>
+                function showImage() {
+                    var header = document.getElementById('headImage');
+                    header.style.display = 'block';
+                    var image = document.getElementById('encImage');
+                    image.style.display = 'block';
+                }
+            </script>
+        </div>
+    </div>
+    </div>
+</body>
